@@ -12,7 +12,7 @@ class GetUserService {
     try {
       Response res = await DioConfig.inherentce
           .createRequest()
-          .get('https://jsonplaceholder.typicode.com/users');
+          .get('/users');
       if (res.statusCode == 200) {
         return res;
       } else {

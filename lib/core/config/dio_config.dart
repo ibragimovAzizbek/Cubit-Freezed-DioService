@@ -10,6 +10,7 @@ class DioConfig {
   Dio createRequest() {
     var dio = Dio(
       BaseOptions(
+        baseUrl: 'https://jsonplaceholder.typicode.com',
         validateStatus: (int? statusCode) {
           if (statusCode != null && (statusCode >= 100 && statusCode <= 211)) {
             return true;
