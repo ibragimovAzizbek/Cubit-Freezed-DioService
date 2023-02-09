@@ -10,9 +10,7 @@ class GetUserService {
 
   Future<dynamic> getUser() async {
     try {
-      Response res = await DioConfig.inherentce
-          .createRequest()
-          .get('/users');
+      Response res = await DioConfig.inherentce.createRequest().get('/users');
       if (res.statusCode == 200) {
         return res;
       } else {
